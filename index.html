@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Font Family -->
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" type="text/css" href="styles.css">
+
+    <title>My Components</title>
+
+  </head>
+  <body>
+    <section>
+      
+      <!-- ----------------Buttons---------------- -->
+      <h1 class="mb-3">Buttons</h1>
+
+      <div class="mb-3">
+      
+        <!-- ----------Default---------- -->
+        <h5 class="mb-1">Default</h5>
+        <button class="btn" style="background-color: #fc4d44;">Button</button>
+        <button class="btn mx-2" style="background-color: #6695fa;">Button</button>
+        <button class="btn" style="background-color: #d15dd9;">Button</button>
+        <!-- ----------/Default---------- -->
+      
+      </div>
+
+      <div class="mb-3">
+        <!-- ------------Ripple Effect------------ -->
+        <h5 class="mb-1">Ripple Effect</h5>
+        <button class="btn ripple" style="background-color: #fc4d44;">Button</button>
+        <button class="btn ripple mx-2" style="background-color: #6695fa;">Button</button>
+        <button class="btn ripple" style="background-color: #d15dd9;">Button</button>
+        <!-- ------------/Ripple Effect------------ -->
+      </div>
+
+      <div class="mb-3">
+        <!-- ------------Ripple Effect (Dark)------------ -->
+        <h5 class="mb-1">Ripple Effect (Dark)</h5>
+        <button class="btn ripple dark" style="background-color: #fc4d44;">Button</button>
+        <button class="btn ripple dark mx-2" style="background-color: #6695fa;">Button</button>
+        <button class="btn ripple dark" style="background-color: #d15dd9;">Button</button>
+        <!-- ------------/Ripple Effect------------ -->
+      </div>
+
+      <div class="mb-3">
+        <!-- ------------Outline Buttons------------ -->
+        <h5 class="mb-1">Outline Buttons</h5>
+        <button class="btn outline" style="--color: #fc4d44;">Button</button>
+        <button class="btn outline mx-2" style="--color: #6695fa;">Button</button>
+        <button class="btn outline" style="--color: #d15dd9;">Button</button>
+        <!-- ------------/Outline Buttons------------ -->
+      </div>
+
+      <div class="mb-3">
+        <!-- ------------Outline Buttons with Ripple Effect------------ -->
+        <h5 class="mb-1">Outline Buttons with Ripple Effect</h5>
+        <button class="btn outline ripple dark" style="--color: #fc4d44;">Button</button>
+        <button class="btn outline ripple dark mx-2" style="--color: #6695fa;">Button</button>
+        <button class="btn outline ripple dark" style="--color: #d15dd9;">Button</button>
+        <!-- ------------/Outline Buttons with Ripple Effect------------ -->
+      </div>
+      <hr class="mb-3">
+      <!-- ----------------/Buttons---------------- -->
+
+      <!-- -------------------Inputs------------------- -->
+      <h1 class="mb-3">Form</h1>
+      
+      <div class="mb-3 w">
+        <h5 class="mb-1">Default Input</h5>
+        <div class="input tooltip-right" data-tooltip="Email">
+          <input type="text" name="input" id="inputEmail" required>
+          <label for="inputEmail">Email</label>
+        </div>
+        <div class="input" style="--color: #18cc2b;">
+          <input type="password" name="input" id="inputPassword" required>
+          <label for="inputPassword">Password</label>
+        </div>
+        <div class="input invalid" data-error="Password is too short">
+          <input type="password" name="input" id="inputPassword2" required>
+          <label for="inputPassword2">Password</label>
+        </div>
+        <h5 class="mb-1">Textarea</h5>
+        <div class="input">
+          <textarea name="textarea" id="inputAddress" required placeholder="Type your address"></textarea>
+          <label for="inputAddress">Address</label>
+        </div>
+        <div class="input invalid" data-error="Address is required">
+          <textarea name="textarea" id="inputAddress" required placeholder="Type your address"></textarea>
+          <label for="inputAddress">Address</label>
+        </div>
+      </div>
+      <hr class="mb-3">
+      <!-- -------------------/Inputs------------------- -->
+
+      <!-- -------------------Search Input------------------- -->
+      <h1 class="mb-3">Search Input</h1>
+      
+      <div class="mb-3 w">
+        <h5 class="mb-1">Default</h5>
+        <form class="search mb-3">
+          <input type="text" name="search" placeholder="Search anything here..." autocomplete="off">
+          <button>Search</button>
+        </form>
+        <h5 class="mb-1">Search with autoformat</h5>
+        <form class="search autoformat">
+          <div class="search-input">
+            <input type="text" name="search" placeholder="Type to see the items..." autocomplete="off">
+            <div class="items custom-scroll">
+              <div class="item" data-value="Item One">Item One</div>
+              <div class="item" data-value="Item Two">Item Two</div>
+              <div class="item" data-value="Item Three">Item Three</div>
+              <div class="item" data-value="Item Four">Item Four</div>
+              <div class="item" data-value="Item Five">Item Five</div>
+              <div class="item" data-value="Item Six">Item Six</div>
+              <div class="item" data-value="Item Seven">Item Seven</div>
+            </div>
+          </div>
+          <button>Search</button>
+        </form>
+      </div>
+      <hr class="mb-3">
+      <!-- -------------------/Search Input------------------- -->
+
+      <!-- -------------------Tooltip------------------- -->
+      <div class="mb-3">
+        <h1 class="mb-3">Tooltips</h1>
+        <div class="box tooltip-left" data-tooltip="Box One"></div>
+        <div class="box tooltip-right" data-tooltip="Box Two"></div>
+        <div class="box tooltip-top" data-tooltip="Box Three"></div>
+        <div class="box tooltip-bottom" data-tooltip="Box Four"></div>
+        <form class="search mb-3">
+          <input type="text" name="search" placeholder="Search anything here...">
+          <button class="tooltip-bottom" data-tooltip="Search">Search</button>
+        </form>
+      </div>
+      <hr class="mb-3">
+      <!-- -------------------/Tooltip------------------- -->
+
+    </section>
+
+    <script type="text/javascript" src="script.js"></script>
+  </body>
+</html>
+
+
+
+
+
