@@ -34,6 +34,10 @@ body {
 	width: 400px;
 }
 
+.bg-dark {
+	background-color: rgba(0, 0, 0, 0.5);
+}
+
 section {
 	width: 90%;
 	margin: auto;
@@ -393,6 +397,165 @@ input {
 
 /*----------------/Tooltip----------------*/
 
+/*----------------Icon With Ripple Effect----------------*/
+
+.icon {
+	position: relative;
+	display: inline-block;
+	padding: .5em;
+	cursor: pointer;
+	z-index: 1;
+	font-size: 1.2rem;
+}
+
+.icon > div {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	border-radius: 50%;
+	z-index: -1;
+	background-color: rgba(0, 0, 0, 0.15);
+	animation: rippleIcon .5s linear forwards;
+}
+
+.icon.white > div {
+	background-color: rgba(255, 255, 255, .65);
+}
+
+.icon.white > i {
+	color: #fff;
+}
+
+.icon > i {
+	color: rgba(0, 0, 0, 0.5);
+	transition: .3s;
+}
+
+.icon:hover > i {
+	color: rgba(0, 0, 0, 1);
+}
+
+.icon.white > i {
+	color: rgba(255, 255, 255, .7);
+}
+
+.icon.white:hover > i { 
+	color: rgba(255, 255, 255, 1);
+}
+
+
+@keyframes rippleIcon {
+	0% {
+		transform: scale(0);
+		opacity: 0;
+	}
+
+	40% {
+		transform: scale(1);
+		opacity: 1;	
+	}
+
+	100% {
+		opacity: 0;
+	}
+}
+
+/*----------------/Icon With Ripple Effect----------------*/
+
+/*-----------------Dropdown-----------------*/
+
+.dropdown {
+	position: relative;
+	display: inline-block;
+	font-size: 1rem;
+	z-index: 1;
+}
+
+.dropdown-title {
+	position: relative;
+	cursor: pointer;
+	padding: 5px 35px 5px 10px;
+	border-bottom: 2px solid transparent;
+}
+
+.dropdown-title:hover {
+	border-color: rgba(0, 0, 0, 0.2);
+}
+
+.dropdown-title span {
+	display: inline-block;
+	max-width: 150px;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	pointer-events: none;
+	user-select: none;
+}
+
+.dropdown-title i {
+	position: absolute;
+	top: 50%;
+	right: 5px;
+	cursor: pointer;
+	transform: translateY(-50%) rotate(180deg);
+	transition: .3s;
+	pointer-events: none;
+	user-select: none;
+}
+
+.dropdown-title.open i {
+	transform: translateY(-50%) rotate(0deg);
+}
+
+.dropdown .dropdown-items {
+	--drop-transition: .3s;
+	--opacity-transition: .2s;
+	position: absolute;
+	top: 100%;
+	left: 0;
+	box-shadow: 0 3px 3px rgba(0, 0, 0, 0.3);
+	width: max-content;
+	max-width: 250px;
+	max-height: 220px;
+	overflow-y: auto;
+	list-style: none;
+	z-index: 5;
+	transform: scaleY(0);
+	transform-origin: top;
+	transition: var(--drop-transition);
+	transition-delay: var(--opacity-transition);
+}
+
+.dropdown .dropdown-items.open {
+	transform: scaleY(1);
+	transition-delay: 0s;
+}
+
+.dropdown .dropdown-items li {
+	opacity: 0;
+	transition: var(--opacity-transition);
+	transition-delay: 0s;
+}
+
+.dropdown .dropdown-items.open li {
+	opacity: 1;
+	transition-delay: var(--drop-transition); 
+}
+
+.dropdown .dropdown-items li a {
+	display: block;
+	padding: 12px 10px;
+	font-size: .9rem;
+	user-select: none;
+}
+
+.dropdown .dropdown-items li a:hover {
+	background-color: rgba(0, 0, 0, 0.1);
+}
+
+/*-----------------/Dropdown-----------------*/
 
 
 
